@@ -8,7 +8,7 @@ function Pokedex(){
     return(
         < div className="pokdex-wrapper">
         <Search updateSearchTerm={setSearchItem}/>
-        {(searchItem.length==0)?  <PokemonList/>: <PokemonDetails name={searchItem} id={null}/> }
+        {(searchItem.length==0)?  <PokemonList/>: <PokemonDetails key={searchItem} name={searchItem} id={null}/> }
         </ div>
     )
 }
